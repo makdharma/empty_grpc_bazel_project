@@ -55,16 +55,19 @@ bind(
     name = "grpc++",
     actual = "@submodule_grpc//:grpc++",
 )
+
 bind(
     name = "grpc++_codegen_proto",
     actual = "@submodule_grpc//:grpc++_codegen_proto",
 )
+
 bind(
     name = "grpc_cpp_plugin",
     actual = "@submodule_grpc//:grpc_cpp_plugin",
 )
+
 git_repository(
     name = "submodule_grpc",
     remote = "https://github.com/grpc/grpc",
-    commit = "fa301e3674a1cc786eb4dd4253a0e677f2eb68e3", #v1.1.2
+    tag = "v1.1.0",
 )
