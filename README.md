@@ -7,4 +7,4 @@ cd test
 git submodule update --init
 bazel build //examples/cpp/helloworld:*
 ```
-This will build the greeter_client and greeter_server exacutables.
+This will build the ```greeter_client``` and ```greeter_server``` exacutables in ```bazel-bin/examples/cpp/helloworld``` subdirectory.
