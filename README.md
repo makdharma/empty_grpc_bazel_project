@@ -4,6 +4,7 @@ To try this repo:
 ```
 git clone https://github.com/makdharma/empty_grpc_bazel_project test
 cd test
+git submodule update --init
 bazel build //examples/cpp/helloworld:*
 ```
 This will build the greeter_client and greeter_server exacutables.
