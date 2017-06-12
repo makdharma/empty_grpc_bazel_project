@@ -29,9 +29,10 @@
 
 package(default_visibility = ["//visibility:public"])
 
-load("//bazel:grpc_build_system.bzl", "grpc_proto_library")
+load("@submodule_grpc//:bazel/grpc_build_system.bzl", "grpc_proto_library")
 
 grpc_proto_library(
     name = "helloworld",
     srcs = ["helloworld.proto"],
+    use_external = True,
 )

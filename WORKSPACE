@@ -31,26 +31,31 @@ local_repository(
 # Protobuf
 bind(
     name = "protobuf",
-    actual = "@submodule_protobuf//:protobuf",
+    actual = "@com_google_protobuf//:protobuf",
 )
 
 bind(
     name = "protobuf_clib",
-    actual = "@submodule_protobuf//:protoc_lib",
+    actual = "@com_google_protobuf//:protoc_lib",
 )
 
 bind(
     name = "protocol_compiler",
-    actual = "@submodule_protobuf//:protoc",
+    actual = "@com_google_protobuf//:protoc",
 )
 
 new_local_repository(
-    name = "submodule_protobuf",
+    name = "com_google_protobuf",
     build_file = "third_party/protobuf/BUILD",
     path = "third_party/protobuf",
 )
 
 # grpc
+bind(
+    name = "bazel",
+    actual = "@submodule_grpc//:bazel",
+)
+
 bind(
     name = "grpc++",
     actual = "@submodule_grpc//:grpc++",
@@ -69,5 +74,5 @@ bind(
 git_repository(
     name = "submodule_grpc",
     remote = "https://github.com/grpc/grpc",
-    tag = "v1.1.0",
+    tag = "v1.4.0-pre1",
 )
